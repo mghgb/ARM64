@@ -38,5 +38,5 @@ volumes:
     driver: local
     driver_opts:
       type: nfs
-      o: addr=192.168.1.73,rw
+      o: addr=192.168.1.72,rw
       device: ":/var/nfs/public/docker/volumes/portainer"
