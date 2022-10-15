@@ -1,5 +1,4 @@
 #!/bin/sh
-sudo su
 hostnamectl set-hostname dock-node-01
 hostnamectl set-hostname "Docker Swarm Node 01" --pretty
 cd /etc/network
@@ -24,5 +23,5 @@ echo $'\n# Disable IPV6' >> sysctl.conf
 echo 'net.ipv6.conf.all.disable_ipv6=1' >> sysctl.conf
 echo 'net.ipv6.conf.default.disable_ipv6=1' >> sysctl.conf
 echo 'net.ipv6.conf.lo.disable_ipv6=1' >> sysctl.conf
-apt purge -y dhcpcd5
+#apt purge -y dhcpcd5
 sleep 10 && reboot
