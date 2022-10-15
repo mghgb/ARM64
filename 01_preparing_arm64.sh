@@ -24,4 +24,5 @@ echo $'\n# Disable IPV6' >> sysctl.conf
 echo 'net.ipv6.conf.all.disable_ipv6=1' >> sysctl.conf
 echo 'net.ipv6.conf.default.disable_ipv6=1' >> sysctl.conf
 echo 'net.ipv6.conf.lo.disable_ipv6=1' >> sysctl.conf
-reboot
+apt purge -y dhcpcd5
+sleep 10 && reboot
